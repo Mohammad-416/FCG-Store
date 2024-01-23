@@ -1,0 +1,105 @@
+{% load static %}
+<div class="col-xl-3 col-lg-4 col-md-5 sidebar">
+					<div id="stickySidebar">
+						<div class="widget-item">
+							<h4 class="widget-title">Trending</h4>
+							<div class="trending-widget">
+              {% for x in sidebar_data %}
+                <div class="tw-item">
+									<div class="tw-thumb">
+                    <img src="https://fcg-store.crazygaming27.repl.co/media/{{ x.Image1 }}" style="width:80px; height:80px;" alt="#">
+                  </div>
+									<div class="tw-text">
+                    <div class="tw-meta">{% now "m.d.y" %}  /  in <a href="https://fcg-store.crazygaming27.repl.co/games.html">Games</a></div>
+										<h5>{{ x.Heading }}</h5>
+									</div>
+                
+
+                <!--
+								<div class="tw-item">
+									<div class="tw-thumb">
+										<img src="{% static './img/blog-widget/1.jpg' %}" alt="#">
+									</div>
+									<div class="tw-text">
+										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<h5>The best online game is out now!</h5>
+									</div>
+								</div>
+                
+
+                
+								<div class="tw-item">
+									<div class="tw-thumb">
+										<img src="{% static './img/blog-widget/2.jpg' %}" alt="#">
+									</div>
+									<div class="tw-text">
+										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<h5>The best online game is out now!</h5>
+									</div>
+								</div>
+								<div class="tw-item">
+									<div class="tw-thumb">
+										<img src="{% static './img/blog-widget/3.jpg' %}" alt="#">
+									</div>
+									<div class="tw-text">
+										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<h5>The best online game is out now!</h5>
+									</div>
+								</div>
+								<div class="tw-item">
+									<div class="tw-thumb">
+										<img src="{% static './img/blog-widget/4.jpg' %}" alt="#">
+									</div>
+									<div class="tw-text">
+										<div class="tw-meta">11.11.18  /  in <a href="">Games</a></div>
+										<h5>The best online game is out now!</h5>
+									</div>-->
+								</div>
+              {% endfor %}
+							</div>
+						</div>
+            <div class="widget-item">
+            <div class="latest-comments">
+              {% for x in sidebar_data %}
+								<div class="lc-item">
+                  
+                  <img src="https://fcg-store.crazygaming27.repl.co/media/{{ x.Image1 }}" class="lc-avatar" alt="#">
+                  <div class="tw-text"><a href="">{{ x.UserName1 }}</a> <span>On</span> {{ x.Title }}<br>{{ x.UserExp1 }}</div></div>
+                  {% endfor %}
+									<!--<img src="{% static './img/blog-widget/1.jpg' %}" class="lc-avatar" alt="#">
+									<div class="tw-text"><a href="">Maria Smith</a> <span>On</span> The best online game out there </div>
+								</div>-->
+								<!--<div class="lc-item">
+									<img src="{% static './img/blog-widget/2.jpg' %}" class="lc-avatar" alt="#">
+									<div class="tw-text"><a href="">Maria Smith</a> <span>On</span> The best online game out there </div>
+								</div>
+								<div class="lc-item">
+									<img src="{% static './img/blog-widget/3.jpg' %}" class="lc-avatar" alt="#">
+									<div class="tw-text"><a href="">Maria Smith</a> <span>On</span> The best online game out there </div>
+								</div>
+								<div class="lc-item">
+									<img src="{% static './img/blog-widget/4.jpg' %}" class="lc-avatar" alt="#">
+									<div class="tw-text"><a href="">Maria Smith</a> <span>On</span> The best online game out there </div>
+								</div>-->
+							</div>
+            </div>
+						<div class="widget-item">
+							<div class="categories-widget">
+								<h4 class="widget-title">categories</h4>
+								<ul>
+									<li><a href="">Games</a></li>
+									<li><a href="">Gaming Tips & Tricks</a></li>
+									<li><a href="">Online Games</a></li>
+									<li><a href="">Team Games</a></li>
+									<li><a href="">Community</a></li>
+									<li><a href="">Uncategorized</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="widget-item">
+						<a href="#" class="add">
+							<img src="{% static './img/add.jpg' %}" alt="">
+						</a>
+					</div>
+					</div>
+				</div>
